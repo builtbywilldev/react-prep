@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+🧪 API Sandbox – React Practice Ground
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A frontend testing environment for playing with APIs, routing, loading states, and UI components. Built with React, Axios, and Router DOM for practicing real-world frontend workflows — and surviving bootcamp nonsense one page at a time.
+🚀 Features
 
-## Available Scripts
+    🔍 Search by User ID – Pull posts from JSONPlaceholder API using a user-provided ID.
 
-In the project directory, you can run:
+    🌀 Skeleton Loading State – Smooth UI while waiting for data to load.
 
-### `npm start`
+    🔁 Routing – Dynamic navigation with React Router and back button logic.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    🎯 Input & Navigation Logic – Controlled search input, Enter key triggers, and programmatic routing.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📁 Project Structure
 
-### `npm test`
+src/
+├── components/
+│   └── Posts.jsx
+├── App.jsx
+├── index.js
+└── styles.css
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔧 Tech Stack
 
-### `npm run build`
+    React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Axios
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    React Router DOM
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Vanilla CSS (for now)
 
-### `npm run eject`
+📡 API Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JSONPlaceholder – free fake REST API for testing and prototyping.
+📸 Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+(Include a screenshot of the Posts page with loading skeleton + fetched data)
+🗺️ Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/yourusername/api-sandbox.git
+cd api-sandbox
+npm install
+npm run dev
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Then go to /1, /2, etc. or use the input field to test search.
 
-## Learn More
+🧠 Why This Exists
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To level up core React fundamentals through hands-on reps — including routing, API calls, and loading states — without relying on libraries like shadcn or Tailwind. Built as a controlled sandbox to actually understand what’s happening under the hood before stacking on fancy tools.
