@@ -1,20 +1,15 @@
+/* Reset & Base */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #e9e9e9;
+  font-family: system-ui, sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #242424;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-  max-width: 1200px;
 }
 
 p {
@@ -26,19 +21,30 @@ p {
   display: none;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* User Grid */
 .user-list {
-  width: auto;
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .user {
-  width: 50%;
+  flex: 1 1 300px;
+  max-width: 50%;
 }
 
 .user-card {
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
   transition: 0.3s;
   cursor: pointer;
@@ -46,84 +52,125 @@ p {
 }
 
 .user-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .user-card__container {
-  padding: 2px 16px;
+  padding: 16px;
 }
 
+/* Post Card */
 .post-card {
   background-color: #fff;
   margin: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 10px;
 }
 
 .post-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .post-card__container {
-  padding: 2px 16px;
+  padding: 16px;
 }
 
+/* Back Button */
 .back-btn {
   color: #fff;
-  background-color: black;
+  background-color: #000;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
 }
 
-.post {
-  border: 1px solid black;
-  background-color: white;
-  margin: 20px;
-}
-
-.post__title {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 1px solid black;
-  padding: 8px;
-}
-
-.post__title--skeleton {
-  width: 80px;
-  height: 12px;
-  background-color: lightgray;
-}
-
-
-.post__body {
-  padding: 0 8px;
-}
-
-.post__body--skeleton {
-  width: 100%;
-  height: 24px;
-  background-color: lightgray;
-}
-
+/* Post Layout */
 .post__search {
-  margin-top: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 20px auto;
   padding: 0 20px;
+  max-width: 700px;
+  gap: 16px;
 }
 
 .post__search--container {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
 
 .post__search--label {
-  padding-right: 8px;
+  font-weight: bold;
+}
+
+
+/* Post Block */
+.post {
+  background-color: white;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  word-break: break-word; /* fix for vertical text wrap */
+}
+
+
+.post__title {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+}
+
+.post__body {
+  font-size: 14px;
+  line-height: 1.5;
+  padding-top: 4px;
+}
+
+
+.post__title--skeleton {
+  width: 60%;
+  height: 16px;
+  background-color: #dcdcdc;
+  margin: 12px 16px;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+
+.post__body--skeleton {
+  width: 100%;
+  height: 20px;
+  background-color: #dcdcdc;
+  margin: 12px 0;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Skeleton Pulse Animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
