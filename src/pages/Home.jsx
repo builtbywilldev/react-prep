@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Home = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate(); // 👈 activate the nav
 
   useEffect(() => {
     async function fetchUsers() {
@@ -39,7 +41,7 @@ const Home = () => {
             ))
           ) : (
             users.map((user) => (
-              <div className="user" key={user.id}>
+              <div className="user" key={user.id} onClick={() => navigate(`/${user.id}`)} style={{ cursor: 'pointer' }}>
                 <div className="user-card">
                   <div className="user-card__container">
                     <h3>{user.name}</h3>
