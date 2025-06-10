@@ -1,4 +1,4 @@
-🧪 API Sandbox – React Practice Ground
+⏳ API Sandbox – React Practice Ground
 
 A frontend testing environment for playing with APIs, routing, loading states, and UI components. Built with React, Axios, and Router DOM for practicing real-world frontend workflows — and surviving bootcamp nonsense one page at a time.
 🚀 Features
